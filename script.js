@@ -29,6 +29,16 @@ function range(start, end) {
     }
     return result;
 }
-
-
 console.log(range(1, 100));
+
+
+
+
+
+
+function sum(numbers) {
+    return numbers.reduce((total, num) => total + num, 0)
+}
+console.log(sum(range(1, 500)));
+
+
