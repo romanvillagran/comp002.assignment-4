@@ -29,16 +29,39 @@ function range(start, end) {
     }
     return result;
 }
-console.log(range(1, 100));
-
-
-
-
+console.log(range(1, 10));
 
 
 function sum(numbers) {
     return numbers.reduce((total, num) => total + num, 0)
 }
-console.log(sum(range(1, 500)));
+console.log(sum(range(1, 50)));
 
+
+
+function reverseArray(arr) {
+    const reversedArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversedArr.push(arr[i]);
+    }
+    return reversedArr;
+}
+console.log(reverseArray(["x", "y", "z"]));
+
+
+function reverseArrayInPlace(arr) {
+    let start = 0;
+    let end = arr.length - 1;
+    
+    while (start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+let arrayValue = [10, 20, 30, 40, 50];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue); 
 
